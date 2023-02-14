@@ -1,0 +1,12 @@
+.content {
+    transition: all 0.3s ease;
+  }
+  
+  .content-expanded {
+    margin-left: 240px; /* ajuste este valor para o tamanho da sua sidebar */
+  }
+  
+  .content-collapsed {
+    margin-left: 64px; /* ajuste este valor para o tamanho do botão toggle */
+  }
+  
