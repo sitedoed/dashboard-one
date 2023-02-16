@@ -14,6 +14,7 @@ import Charts from './pages/Charts';
 import Docs from './pages/Docs';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Posts from './pages/Posts';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/cadastrar",
     element: <Register />
+  },
+  {
+    path: "/posts",
+    element: <Posts />
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

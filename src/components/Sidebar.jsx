@@ -7,6 +7,7 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import InsertChartIcon from '@mui/icons-material/InsertChart';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import BookIcon from '@mui/icons-material/Book';
 
 export default function Sidebar() {
 
@@ -28,6 +29,7 @@ export default function Sidebar() {
               <li><Link to={'/projeto'}><DashboardIcon />Projeto</Link></li>
               <li><Link to={'/graficos'}><InsertChartIcon />Gráficos</Link></li>
               <li><Link to={'/documentacao'}><InsertChartIcon />Documentação</Link></li>
+              <li><Link to={'/posts'}><BookIcon />Posts</Link></li>
               <li><a href="https://dashboard-one-react.netlify.app/" target='_blank' rel="noreferrer"><OpenInNewIcon />Netlify</a></li>
             </ul>
           </nav>
