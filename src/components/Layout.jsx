@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Sidebar from './Sidebar';
 import TopBar from './TopBar';
-import CardGrid from './CardGrid';
 import './Layout.css';
 
 
@@ -24,8 +23,9 @@ export default function Layout(props) {
                 </Grid>
                 <Grid item xs={6} md={10} className={`content ${isSidebarOpen ? 'content-expanded' : 'content-collapsed'}`}>
                     <TopBar />
-                    <CardGrid />
-                    {props.children}
+                    <div className='main-content'>
+                      {props.children}
+                    </div>
                 </Grid>
             </Grid>
         </Box>

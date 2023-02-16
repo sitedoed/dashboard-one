@@ -21,3 +21,21 @@
     top: 10px;
     right: -50px;
   }
+
+  .sidebar ul{
+    list-style-type: none;
+    padding: 1ch;
+  }
+  .sidebar li{
+    padding: 0.5ch;
+  }
+  .sidebar a{
+    text-decoration: none;
+    color: rgb(61, 58, 75);
+  }
+  .sidebar a:hover{
+    color: #1d1c1c;
+  }
+  .main-content{
+    margin-top: 2vh;
+  }

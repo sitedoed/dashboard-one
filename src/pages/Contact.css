@@ -1,0 +1,26 @@
+.contactform{
+    margin: 0 auto;
+    display: block;
+    max-width: 80vw;
+}
+.contactform input{
+    margin-top: 1rem;
+    min-width: calc(100% - 2.5rem);
+    height: 5vh;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #a0a19d;
+}
+.contactform textarea{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    min-width: calc(100% - 2.5rem);
+    height: 18vh;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #a0a19d;
+}
+.contactform button{
+    margin-top: 1rem;
+    float: right;
+}
