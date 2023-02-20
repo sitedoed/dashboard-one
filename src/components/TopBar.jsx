@@ -7,8 +7,8 @@ import SearchIcon from '@mui/icons-material/Search';
 export default function TopBar() {
   return (
     <div className='topbar'>
-      <div className="search-container">
-        <FormControl sx={{ m: 1, width: '35ch' }} variant="outlined">
+      <div className="search-container" style={{ flexGrow: 1, justifyContent: 'flex-end' }}>
+        <FormControl sx={{ m: 1, width: '100%', maxWidth: '50ch' }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Pesquisar</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -23,5 +23,6 @@ export default function TopBar() {
         </FormControl>
       </div>
     </div>
+
   )
 }

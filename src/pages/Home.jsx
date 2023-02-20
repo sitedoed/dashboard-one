@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import CardGrid from '../components/CardGrid';
 import GeoChart from '../components/charts/GeoChart';
+import DataTable from '../components/DataTable';
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
     <Layout>
       <CardGrid />
       <GeoChart />
+      <DataTable />
     </Layout>
   )
 }

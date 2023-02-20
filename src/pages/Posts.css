@@ -1,0 +1,16 @@
+.posts-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.posts-component {
+    flex: 1;
+    margin: 2vh;
+    text-align: center;
+    width: 100%;
+}
+.titulo{
+    margin-bottom: 5vh;
+}

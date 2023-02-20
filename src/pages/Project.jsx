@@ -14,7 +14,8 @@ export default function Project() {
           <h2>Principais Tecnologias</h2>
           <ul>
             <li>ReactJS</li>
-            <li>Editor de Textos Wysiwyg - Disponível em: <a href="https://jpuri.github.io/react-draft-wysiwyg/#/">React Draft Wysiwyg</a></li>
+            <li>Editor de Textos Wysiwyg - Disponível em: <a href="https://jpuri.github.io/react-draft-wysiwyg/#/" target="_blank" rel="noreferrer">React Draft Wysiwyg</a></li>
+            <li>Editor de TimyMCE - Disponível em: <a href="https://www.tiny.cloud/" target="_blank" rel="noreferrer">TimyMCE Editor</a></li>
           </ul>
         </article>
       </section>

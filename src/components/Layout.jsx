@@ -17,7 +17,7 @@ export default function Layout(props) {
   return (
     <div>
         <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
+            <Grid container>
                 <Grid item xs={6} md={2}>
                     <Sidebar  isOpen={isSidebarOpen} onToggle={handleSidebarToggle}/>
                 </Grid>

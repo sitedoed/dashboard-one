@@ -20,7 +20,7 @@ export default function Sidebar() {
     return (
     <>    
         <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-          <img src={seulogo} alt="seu logo" />
+          <a href='/'><img src={seulogo} alt="seu logo" /></a>
           <button className='sidebar-toggle-btn' onClick={toggleSidebar}>Click</button>
           <nav>
             <ul>

@@ -1,0 +1,12 @@
+.success{
+    background-color: #47d147;
+    opacity: 60%;
+}
+.warning{
+    background-color: #ffff1a;
+    opacity: 60%;
+}
+.danger{
+    background-color: #ff3333;
+    opacity: 70%;
+}
