@@ -8,7 +8,7 @@
   justify-content: space-between;
   background-color: #f2f2f2;
   border: 1px solid #ddd;
-  z-index:999;
+  z-index: 999;
   flex-grow: 1;
 }
 
@@ -29,9 +29,6 @@
 }
 
 .topbar-search-input {
-  width: 100%; /* ajusta a largura do input */
-  max-width: 50ch; /* mantém a largura máxima */
+  width: 100%;
+  max-width: 50ch;
 }
-
-
-

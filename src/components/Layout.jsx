@@ -1,35 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Sidebar from './Sidebar';
 import TopBar from './TopBar';
 import './Layout.css';
 
-
 export default function Layout(props) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-    const handleSidebarToggle = () => {
-    //  console.log('Sidebar toggle clicked');
-      setIsSidebarOpen(!isSidebarOpen);
-    };
+  const handleSidebarToggle = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
-    <div>
-        <Box sx={{ flexGrow: 1 }}>
-            <Grid container>
-                <Grid item xs={6} md={2}>
-                    <Sidebar  isOpen={isSidebarOpen} onToggle={handleSidebarToggle}/>
-                </Grid>
-                <Grid item xs={6} md={10} className={`content ${isSidebarOpen ? 'content-expanded' : 'content-collapsed'}`}>
-                    <TopBar />
-                    <div className='main-content'>
-                      {props.children}
-                    </div>
-                </Grid>
-            </Grid>
-        </Box>
+    <div className="layout">
+      <div className="sidebar-container" style={{ flex: isSidebarOpen ? '1 1 16.666%' : '0 0 0' }}>
+        <Sidebar isOpen={isSidebarOpen} onToggle={handleSidebarToggle} />
+      </div>
+      <div className="main-container" style={{ flex: isSidebarOpen ? '1 1 83.334%' : '1 1 100%' }}>
+        <TopBar isOpen={isSidebarOpen} onToggle={handleSidebarToggle} />
+        <div className='main-content'>
+          {props.children}
+        </div>
+      </div>
     </div>
-  )
+  );
 }

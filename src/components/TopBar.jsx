@@ -3,23 +3,22 @@ import './TopBar.css';
 import { FormControl, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
-
-export default function TopBar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+export default function TopBar(props) {
+  const { isOpen, onToggle } = props;
   const [topBarWidth, setTopBarWidth] = useState('100%');
   const [isTopBarCollapsed, setIsTopBarCollapsed] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setTopBarWidth(isSidebarOpen ? 'calc(100% - 240px)' : '100%');
-      setIsTopBarCollapsed(!isSidebarOpen);
+      setTopBarWidth(isOpen ? 'calc(100% - 240px)' : '100%');
+      setIsTopBarCollapsed(!isOpen);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [isSidebarOpen]);
+  }, [isOpen]);
 
   return (
     <div className={`topbar ${isTopBarCollapsed ? 'topbar-collapsed' : 'topbar-expanded'}`} style={{ width: topBarWidth }}>
@@ -39,6 +38,5 @@ export default function TopBar() {
         </FormControl>
       </div>
     </div>
-
-  )
+  );
 }

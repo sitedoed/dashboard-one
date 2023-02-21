@@ -1,11 +1,25 @@
 .layout {
-display: grid;
-grid-template-columns: auto 1fr;
-grid-template-rows: auto 1fr;
-grid-template-areas:
-  "sidebar topbar"
-  "sidebar main";
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
 }
+
+.sidebar-container {
+  flex-grow: 1;
+  flex-basis: 16.666%;
+  transition: flex-basis 0.3s ease-in-out;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 83.334%;
+  transition: flex-basis 0.3s ease-in-out;
+}
+
+
+
 .content {
   grid-area: main;
 }
@@ -27,12 +41,28 @@ grid-template-areas:
 }
 
 .topbar {
-  grid-area: topbar;
   width: 100%;
+}
 
-  @media (min-width: 960px) {
-    width: calc(100% - 240px);
-  }
+.topbar-collapsed {
+  width: calc(100% - 64px);
+}
+
+.topbar-expanded {
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding-right: 13rem;
+}
+
+.topbar-search-input {
+  width: 100%;
+  max-width: 50ch;
 }
 
 .main-content{
