@@ -11,6 +11,7 @@ export default function Layout(props) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const handleSidebarToggle = () => {
+    //  console.log('Sidebar toggle clicked');
       setIsSidebarOpen(!isSidebarOpen);
     };
 

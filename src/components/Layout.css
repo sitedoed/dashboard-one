@@ -1,19 +1,44 @@
+.layout {
+display: grid;
+grid-template-columns: auto 1fr;
+grid-template-rows: auto 1fr;
+grid-template-areas:
+  "sidebar topbar"
+  "sidebar main";
+}
 .content {
-    transition: all 0.3s ease;
-  }
-  
-  .content-expanded {
-    margin-left: 240px; /* ajuste este valor para o tamanho da sua sidebar */
-  }
-  
-  .content-collapsed {
-    margin-left: 64px; /* ajuste este valor para o tamanho do botão toggle */
-  }
-  
-  .main-content{
-    margin-top: 15vh;
-  }
+  grid-area: main;
+}
 
-  .margin-top-5vh{
-    margin-top: 5vh;
+.content-expanded {
+  grid-template-areas:
+    "sidebar topbar"
+    "sidebar main";
+}
+
+.content-collapsed {
+  grid-template-areas:
+    "topbar topbar"
+    "main main";
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.topbar {
+  grid-area: topbar;
+  width: 100%;
+
+  @media (min-width: 960px) {
+    width: calc(100% - 240px);
   }
+}
+
+.main-content{
+  margin-top: 15vh;
+}
+
+.margin-top-5vh{
+  margin-top: 5vh;
+}

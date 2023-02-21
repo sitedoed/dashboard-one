@@ -14,6 +14,7 @@ export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(true);
 
     const toggleSidebar = () => {
+      console.log('Sidebar toggle clicked');
       setIsOpen(!isOpen);
     };
 
